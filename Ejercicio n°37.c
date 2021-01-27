@@ -57,7 +57,7 @@ struct pila *apilar(long x,struct pila *pila){
     }
     fread(&data,sizeof(data),1,p_archivo);
     while(!feof(p_archivo)){
-        if((data.clave==x) && (data.clave & (1<<4))){
+        if((data.clave==x) && (data.tipo & (1<<4))){
             //Muestro los datos encontrados.
             printf("\nClave: %ld.",data.clave);
             printf("\nDescripcion: %s.",data.d);
