@@ -7,7 +7,7 @@ struct d{
   char d[30];
   unsigned char tipo;
   char b;
-  int pos;//Se agrega esta variable a la estructura para luego saber su posición.
+  int pos;//Se agrega esta variable a la estructura para luego saber su posiciÃ³n.
 }d;
 
 struct pila{
@@ -57,7 +57,7 @@ struct pila *apilar(long x,struct pila *pila){
     }
     fread(&data,sizeof(data),1,p_archivo);
     while(!feof(p_archivo)){
-        if(data.clave==x){
+        if((data.clave==x) && (data.clave & (1<<4))){
             //Muestro los datos encontrados.
             printf("\nClave: %ld.",data.clave);
             printf("\nDescripcion: %s.",data.d);
